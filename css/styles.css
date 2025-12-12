@@ -525,4 +525,26 @@ footer {
   .icp-grid {
     grid-template-columns: 1fr;
   }
+  
+}
+
+.problems-grid,
+.solutions-grid {
+  justify-items: stretch;
+}
+
+.problems-grid,
+.solutions-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* centraliza quando sobram cards na última linha */
+.problems-grid,
+.solutions-grid {
+  justify-content: center;
+}
+
+.problem-card,
+.solution-card {
+  height: 100%;
 }
