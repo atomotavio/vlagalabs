@@ -678,3 +678,29 @@ header {
     justify-self: end;
   }
 }
+
+/* ===== Fix hambúrguer: barras uma embaixo da outra ===== */
+.nav-toggle {
+  display: none;               /* desktop continua escondido */
+  flex-direction: column;      /* garante coluna */
+  align-items: center;
+  justify-content: center;
+  gap: 6px;                    /* espaçamento entre barras */
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--text-white);
+  border-radius: 2px;
+  margin: 0;                   /* mata qualquer margin antigo */
+  flex: 0 0 auto;
+}
+
+/* Mobile: mostra o botão */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+}
