@@ -50,7 +50,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav {
+.nav {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -71,23 +71,6 @@ nav {
 
 .logo-mark {
   font-size: 1.6rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--text-gray);
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--text-white);
 }
 
 .social-links {
@@ -542,5 +525,94 @@ nav {
   }
   .cta-section h2 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+/* ===== Navbar responsiva (definitivo) ===== */
+.nav {
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--text-white);
+  margin: 6px 0;
+  border-radius: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 1rem;
+    left: 1rem;
+
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+
+    background: rgba(5, 32, 27, 0.98);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 1.25rem;
+
+    box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+    z-index: 2000;
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    color: var(--text-white);
+  }
+
+  .social-links {
+    width: 100%;
+    justify-content: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255,255,255,0.10);
   }
 }
