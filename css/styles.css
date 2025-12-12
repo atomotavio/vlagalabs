@@ -652,19 +652,25 @@ header {
   }
 }
 
-/* ===== Desktop: links realmente centralizados ===== */
+/* ===== Desktop: links centralizados, ícones à direita ===== */
 @media (min-width: 901px) {
   .nav {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* logo | links | sociais */
+    grid-template-columns: 1fr auto 1fr; /* logo | links | ícones */
     align-items: center;
+    column-gap: 2rem;
   }
 
   .logo {
     justify-self: start;
   }
 
+  /* Wrapper não “centraliza tudo” */
   .nav-menu {
+    display: contents; /* faz os filhos participarem do grid do .nav */
+  }
+
+  .nav-links {
     justify-self: center;
   }
 
