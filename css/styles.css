@@ -339,10 +339,137 @@ nav {
   font-size: 0.9rem;
 }
 
-/* ICP */
+/* === HOTFIX: ICP + Footer (fecha qualquer bagunça anterior) === */
+
+/* ICP (Para quem) */
 .icp-section {
   padding: 6rem 0;
   background: #f8f9fa;
 }
 
 .icp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+.icp-card {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.icp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+}
+
+.icp-card h3 {
+  font-size: 1.8rem;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.icp-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icp-card li {
+  padding: 0.8rem 0;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.icp-card li:last-child {
+  border-bottom: none;
+}
+
+.icp-card li::before {
+  content: "✓";
+  color: var(--primary-green);
+  font-weight: 800;
+  margin-top: 0.1rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--primary-green);
+  color: var(--text-white);
+  padding: 3.5rem 2rem 2rem;
+}
+
+.site-footer .footer-inner {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-footer .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.site-footer .footer-tagline {
+  opacity: 0.85;
+  max-width: 520px;
+}
+
+.site-footer .footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-footer .footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.site-footer .footer-links a:hover {
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.site-footer .footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .icp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
