@@ -528,12 +528,6 @@ header {
   }
 }
 
-@media (max-width: 900px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
 /* ===== Navbar responsiva (definitivo) ===== */
 .nav {
   position: relative;
@@ -561,6 +555,47 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+/* ===== Desktop navbar: recuperar aparência antiga ===== */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-gray);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--text-white);
+}
+
+/* Ícones alinhados e consistentes */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: var(--text-gray);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--text-white);
+  transform: translateY(-1px);
 }
 
 /* Mobile */
@@ -614,5 +649,26 @@ header {
     justify-content: center;
     padding-top: 0.5rem;
     border-top: 1px solid rgba(255,255,255,0.10);
+  }
+}
+
+/* ===== Desktop: links realmente centralizados ===== */
+@media (min-width: 901px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* logo | links | sociais */
+    align-items: center;
+  }
+
+  .logo {
+    justify-self: start;
+  }
+
+  .nav-menu {
+    justify-self: center;
+  }
+
+  .social-links {
+    justify-self: end;
   }
 }
