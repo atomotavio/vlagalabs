@@ -1,0 +1,116 @@
+.legal-hero {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+  color: var(--text-white);
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  margin-top: 4rem; /* compensa header fixo */
+}
+
+.legal-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.legal-date {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.legal-content {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.legal-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.legal-section {
+  margin-bottom: 3rem;
+}
+
+.legal-section h2 {
+  color: var(--primary-green);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-green);
+}
+
+.legal-section p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #333333;
+}
+
+.legal-section ul {
+  margin: 1rem 0 1rem 2rem;
+  line-height: 1.8;
+}
+
+.contact-box {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-green);
+  margin-top: 1rem;
+}
+
+.contact-box a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+.back-link-wrapper {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--primary-green);
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.back-link:hover {
+  background: var(--primary-green);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .legal-hero {
+    padding: 6rem 1rem 3rem;
+  }
+  .legal-hero h1 {
+    font-size: 2rem;
+  }
+  .legal-wrapper {
+    padding: 2rem 1.5rem;
+  }
+  .legal-section h2 {
+    font-size: 1.3rem;
+  }
+  .legal-section ul {
+    margin-left: 1.5rem;
+  }
+}
