@@ -473,3 +473,74 @@ nav {
     text-align: center;
   }
 }
+
+/* === FIX: seção "Quando" + CTA estavam sem formatação === */
+
+.when-section {
+  padding: 6rem 0;
+  background: var(--light-green);
+  color: var(--text-white);
+  text-align: center;
+}
+
+.when-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.when-card {
+  background: rgba(255, 255, 255, 0.10);
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.when-card h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.when-card p {
+  opacity: 0.9;
+}
+
+.when-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.cta-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+  color: var(--text-white);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.cta-section p {
+  font-size: 1.15rem;
+  margin: 0 auto 2.5rem;
+  max-width: 720px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .when-card {
+    text-align: center;
+  }
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}
