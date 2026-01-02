@@ -239,62 +239,7 @@
     <div class="container">
       <h2>Pronto para Escalar sem Caos?</h2>
       <p>Agende uma call de 30 minutos e vamos conversar sobre como a automação pode transformar sua agência.</p>
-      <a href="./index.html#agendar" class="cta-button">Agendar Minha Call Gratuita</a>
-    </div>
-  </section>
-
-  <section class="calendar-section" id="agendar">
-    <div class="container">
-      <h2 class="section-title">Agende Sua Call Estratégica</h2>
-      <p class="section-subtitle">30 minutos para entender sua operação e mostrar como podemos ajudar</p>
-
-      <div class="calendar-container">
-        <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
-        <script type="text/javascript">
-          (function (C, A, L) {
-            let p = function (a, ar) { a.q.push(ar); };
-            let d = C.document;
-            C.Cal = C.Cal || function () {
-              let cal = C.Cal;
-              let ar = arguments;
-              if (!cal.loaded) {
-                cal.ns = {};
-                cal.q = cal.q || [];
-                d.head.appendChild(d.createElement("script")).src = A;
-                cal.loaded = true;
-              }
-              if (ar[0] === L) {
-                const api = function () { p(api, arguments); };
-                const namespace = ar[1];
-                api.q = api.q || [];
-                if (typeof namespace === "string") {
-                  cal.ns[namespace] = cal.ns[namespace] || api;
-                  p(cal.ns[namespace], ar);
-                  p(cal, ["initNamespace", namespace]);
-                } else p(cal, ar);
-                return;
-              }
-              p(cal, ar);
-            };
-          })(window, "https://app.cal.com/embed/embed.js", "init");
-
-          Cal("init", "30min", { origin: "https://app.cal.com" });
-          Cal.ns["30min"]("inline", {
-            elementOrSelector: "#my-cal-inline-30min",
-            config: { layout: "month_view", theme: "light" },
-            calLink: "otaviovlaga/30min",
-          });
-          Cal.ns["30min"]("ui", {
-            theme: "light",
-            cssVarsPerTheme: {
-              light: { "cal-brand": "#05201b" },
-              dark: { "cal-brand": "#05201b" },
-            },
-            hideEventTypeDetails: false,
-            layout: "month_view",
-          });
-        </script>
-      </div>
+      <a href="#tally-open=EkdQ8r&tally-layout=modal&tally-width=500&tally-emoji-text=👋&tally-emoji-animation=none&tally-form-events-forwarding=1" class="cta-button">Agendar Minha Call Gratuita</a>
     </div>
   </section>
 
